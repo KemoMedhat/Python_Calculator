@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 import random
-#you don't need this part i'm just trying themes and you can chang the theme list by changeng the thms_menu list 
+
 thms = ['Black', 'BlueMono', 'BluePurple', 'BrightColors', 'BrownBlue', 'Dark',
         'Dark2', 'DarkAmber', 'DarkBlack', 'DarkBlack1', 'DarkBlue', 'DarkBlue1', 
         'DarkBlue10', 'DarkBlue11', 'DarkBlue12', 'DarkBlue13', 'DarkBlue14', 'DarkBlue15', 
@@ -44,9 +44,11 @@ def create_window(theme):
         [sg.Button(0,expand_x=True,expand_y=True),sg.Button('.',size = btnsize),sg.Button('+',size = btnsize)]
     ]
     return sg.Window('Calculator', layout)
+
+
 thms_menu = ['menu',['LightGrey','Topanga','LightGreen6','BluePurple','random']]
 window = create_window('LightGrey1')
-current_num = ['']
+current_num = []
 operation =[]
 while True:
     event , value = window.read()
@@ -73,5 +75,7 @@ while True:
         current_num =[]
         operation =[]
         window['-screen-'].update(" ")
+
+
 window.close()
 
