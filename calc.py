@@ -47,7 +47,7 @@ def create_window(theme):
 
 
 thms_menu = ['menu',['LightGrey','Topanga','LightGreen6','BluePurple','random']]
-window = create_window('LightGrey1')
+window = create_window('Topanga')
 current_num = []
 operation =[]
 while True:
